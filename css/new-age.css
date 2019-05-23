@@ -1,4 +1,6 @@
+/* Estilo Página Landing page */
 
+/*Fontes CSS*/
 .heading-font {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
@@ -12,6 +14,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+/*Estilização Corpo*/
 html,
 body {
   height: 100%;
@@ -54,11 +57,13 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
 }
+/*Logo Topo */
 @media (min-width: 768px) {
   .navbar-brand{
     height: 100px;
   }
 }
+/*Estilização Header e Seções*/
 header {
   position: relative;
   width: 100%;
@@ -92,7 +97,6 @@ header .header-principal .header-principal-inner h1 {
   background-color: rgba(20,100,24,0.5);
   border-radius: 10px;
 }
-
 @media (min-width: 768px) {
   header {
     min-height: 100%;
@@ -239,10 +243,6 @@ footer ul li a.active {
 .btn-text{
   color: white;
 }
-/*.btn-xl {
-  padding: 15px 45px;
-  font-size: 11px;
-} */
 ::-moz-selection {
   color: white;
   text-shadow: none;

@@ -64,14 +64,14 @@ p {
   font-weight: 200;
   letter-spacing: 1px;
 }
-.navbar-default .navbar-header .navbar-brand {
+.navbar-default .navbar-header{
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
   color: #3AA849;
 }
-.navbar-default .navbar-header .navbar-brand:hover,
-.navbar-default .navbar-header .navbar-brand:focus {
+.navbar-default .navbar-header,
+.navbar-default .navbar-header{
   color: #3AA849;
 }
 .navbar-default .navbar-header .navbar-toggle {
@@ -107,11 +107,14 @@ p {
     background-color: transparent;
     border-color: transparent;
   }
-  .navbar-default .navbar-header .navbar-brand {
+  .navbar-brand{
+    height: 100px;
+  }
+  .navbar-default .navbar-header {
     color: rgba(255, 255, 255, 0.7);
   }
-  .navbar-default .navbar-header .navbar-brand:hover,
-  .navbar-default .navbar-header .navbar-brand:focus {
+  .navbar-default .navbar-header,
+  .navbar-default .navbar-header {
     color: white;
   }
   .navbar-default .nav > li > a,
@@ -126,11 +129,11 @@ p {
     background-color: white;
     border-color: rgba(34, 34, 34, 0.1);
   }
-  .navbar-default.affix .navbar-header .navbar-brand {
+  .navbar-default.affix .navbar-header{
     color: #222222;
   }
-  .navbar-default.affix .navbar-header .navbar-brand:hover,
-  .navbar-default.affix .navbar-header .navbar-brand:focus {
+  .navbar-default.affix .navbar-header,
+  .navbar-default.affix .navbar-header {
     color: #fdcc52;
   }
   .navbar-default.affix .nav > li > a,
@@ -142,13 +145,21 @@ p {
     color: #fdcc52;
   }
 }
+
 header {
   position: relative;
+  width: 100%;
+  color: white;
+  opacity: 0.8;
+  background-color: rgba(20,100,24,0.5);
+}
+
+.imagem-back{
   width: 100%;
   background: url("../img/img-destaque.jpg");
   background-size: cover;
   background-position: center;
-  color: white;
+  background-color: rgba(0,0,255,0.5);
 }
 header .header-principal {
   text-align: center;
@@ -164,6 +175,11 @@ header .header-principal .header-principal-inner h1 {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 30px;
+}
+
+.opacidade-header{
+  background-color: rgba(20,100,24,0.5);
+  border-radius: 10px;
 }
 
 @media (min-width: 768px) {
@@ -193,6 +209,26 @@ header .header-principal .header-principal-inner h1 {
     font-size: 50px;
   }
 }
+
+.estilo-form{
+  height: 50px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 2rem;
+}
+
+/*.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+} */
+
 section {
   padding: 100px 0;
 }
@@ -202,6 +238,7 @@ section h2 {
 section.formulario {
   padding: 150px 0;
   position: relative;
+
 }
 section.formulario h2 {
   margin-top: 0;
@@ -209,7 +246,7 @@ section.formulario h2 {
 }
 @media (min-width: 768px) {
   section.formulario h2 {
-    font-size: 70px;
+    font-size: 50px;
   }
 }
 section.vantagens .section-heading {
@@ -243,6 +280,11 @@ section.vantagens .vantagem-item i {
   section.vantagens .vantagem-item {
     max-width: none;
   }
+}
+
+.margem-padding-0{
+  margin: 0px!important;
+  padding: 0px!important;
 }
 /*section.cta {
   position: relative;
@@ -280,7 +322,7 @@ section.cta .overlay {
 } */
 section.contato {
   text-align: center;
-  padding: 45px 0;
+  padding: 30px 0;
 }
 section.contato h2 {
   margin-top: 0;
@@ -294,28 +336,14 @@ section.contato ul.list-social {
 }
 section.contato ul.list-social li a {
   display: block;
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
   line-height: 80px;
   font-size: 40px;
   border-radius: 100%;
   color: white;
 }
-section.contato ul.list-social li.social-twitter a {
-  background-color: #1da1f2;
-}
-section.contato ul.list-social li.social-twitter a:hover {
-  background-color: #0d95e8;
-}
-section.contato ul.list-social li.social-facebook a {
-  background-color: #3b5998;
-}
-section.contato ul.list-social li.social-instagram a {
-  background-color: #cd486b;
-}
-section.contato ul.list-social li.social-linkedin a {
-  background-color: #0976b4;
-}
+
 footer {
   background-color: #222222;
   padding: 25px 0;
@@ -341,8 +369,8 @@ footer ul li a.active {
 }
 .bg-primary {
   background: #3AA849;
-  background: -webkit-linear-gradient(#3AA849, #3Afc41);
-  background: linear-gradient(#3AA849, #3Afc41);
+  background: -webkit-linear-gradient(rgba(20,100,24,0.5));
+  background: linear-gradient(rgba(20,100,24,0.5));
 }
 
 .text-primary {
@@ -370,6 +398,12 @@ footer ul li a.active {
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 300px;
+}
+.btn-color-green{
+  background-color: #146418;
+}
+.btn-color-green:hover{
+  color: blue;
 }
 .btn-xl {
   padding: 15px 45px;
